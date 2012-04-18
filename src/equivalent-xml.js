@@ -47,7 +47,7 @@ EquivalentXml = (function(){
   var node_index = function(node, set){
     var index = -1;
     _.find(set, function(element, i){
-      var result = node.isSameNode(element);
+      var result = node === element;
       if(result){ index = i; }
       return result;
     });
