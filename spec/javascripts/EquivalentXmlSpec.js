@@ -58,11 +58,11 @@ describe("EquivalentXml",function(){
     expect(doc1).not.beEquivalentTo(doc2);
   });
 
-  // it("should compare namespaces based on URI, not on prefix", function(){
-  //   var doc1 = XML("<doc xmlns:foo='foo:bar'><foo:first>foo  bar baz</foo:first><foo:second>things</foo:second></doc>");
-  //   var doc2 = XML("<doc xmlns:baz='foo:bar'><baz:first>foo  bar baz</baz:first><baz:second>things</baz:second></doc>");
-  //   expect(doc1).beEquivalentTo(doc2);
-  // });
+  it("should compare namespaces based on URI, not on prefix", function(){
+    var doc1 = XML("<doc xmlns:foo='foo:bar'><foo:first>foo  bar baz</foo:first><foo:second>things</foo:second></doc>");
+    var doc2 = XML("<doc xmlns:baz='foo:bar'><baz:first>foo  bar baz</baz:first><baz:second>things</baz:second></doc>");
+    expect(doc1).beEquivalentTo(doc2);
+  });
 
   it("should ignore declared but unused namespaces", function(){
     var doc1 = XML("<doc xmlns:foo='foo:bar'><first>foo  bar baz</first><second>things</second></doc>");

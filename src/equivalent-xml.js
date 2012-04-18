@@ -1,17 +1,20 @@
 //= require underscore.js
 
 EquivalentXml = (function(){
+  var canonical_name = function(node){
+    return node.namespaceURI + ':' + node.localName
+  };
   
   var compare_documents = function(node_1, node_2, opts){
     return is_equivalent(node_1.childNodes,node_2.childNodes,opts);
   };
   
   var compare_elements = function(node_1, node_2, opts){
-    return node_1.nodeName == node_2.nodeName && compare_children(node_1, node_2, opts);
+    return canonical_name(node_1) == canonical_name(node_2) && compare_children(node_1, node_2, opts);
   };
   
   var compare_attributes = function(node_1, node_2, opts){
-    return node_1.name == node_2.name && node_1.value == node_2.value;
+    return canonical_name(node_1) == canonical_name(node_2) && node_1.value == node_2.value;
   };
   
   var compare_cdata = function(node_1, node_2, opts){
