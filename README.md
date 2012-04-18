@@ -90,8 +90,3 @@ It has been tested on:
  - Chrome 18
  - Safari 5
  - Firefox 
- 
-Limitations
-===========
-
-Namespaces are not properly supported, they are checked with prefix rather than the URI.
