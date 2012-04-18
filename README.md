@@ -46,12 +46,24 @@ Using with Jasmine
      expect(node_1).not.beEquivalentTo(node_2);
      expect(node_1).beEquivalentTo(node_2,{element_order: true});
 
+Install tools
+=============
+
+If you want to test or build the source you will first need to install [Ruby](http://ruby-lang.org) and [Bundler](http://gembundler.com/). Once you have this:
+
+    $ bundle install
+
+Building the source with dependencies
+=====================================
+
+    $ mkdir build
+    $ rake build
+
 Tests
 =====
 
-All of the tests are written in [Jasmine](http://pivotal.github.com/jasmine/). [Sprockets](https://github.com/sstephenson/sprockets) is used to describe dependencies between the files. To run the tests, you will first need to install [Ruby](http://ruby-lang.org) and [Bundler](http://gembundler.com/). Once you have this:
+All of the tests are written in [Jasmine](http://pivotal.github.com/jasmine/). [Sprockets](https://github.com/sstephenson/sprockets) is used to describe dependencies between the files. To start jasmine run:
 
-    $ bundle install
     $ rake jasmine
     
 Open your browser to [http://localhost:8888](http://localhost:8888)
