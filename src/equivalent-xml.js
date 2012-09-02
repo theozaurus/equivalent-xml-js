@@ -2,7 +2,7 @@
 
 EquivalentXml = (function(){
   var canonical_name = function(node){
-    return node.namespaceURI + ':' + node.localName
+    return node.namespaceURI + ':' + node.localName;
   };
   
   var compare_documents = function(node_1, node_2, opts){
