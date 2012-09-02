@@ -64,6 +64,12 @@ describe("EquivalentXml",function(){
     expect(doc1).beEquivalentTo(doc2);
   });
 
+  it("should not matter where the namespace is defined", function() {
+    var doc1 = XML("<doc xmlns:foo='foo:bar'><foo:first/></doc>");
+    var doc2 = XML("<doc><first xmlns='foo:bar'/></doc>");
+    expect(doc1).beEquivalentTo(doc2);
+  });
+
   it("should ignore declared but unused namespaces", function(){
     var doc1 = XML("<doc xmlns:foo='foo:bar'><first>foo  bar baz</first><second>things</second></doc>");
     var doc2 = XML("<doc><first>foo  bar baz</first><second>things</second></doc>");

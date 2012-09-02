@@ -30,7 +30,7 @@ EquivalentXml = (function(){
   };
   
   var attribute_is_namespace = function(attribute){
-    return attribute.prefix == "xmlns";
+    return (attribute.prefix == "xmlns" || attribute.name == "xmlns") && attribute.namespaceURI == "http://www.w3.org/2000/xmlns/";
   };
   
   var compare_children = function(node_1, node_2, opts){
