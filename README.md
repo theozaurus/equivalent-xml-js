@@ -62,7 +62,7 @@ Building the source with dependencies
 Tests
 =====
 
-All of the tests are written in [Jasmine](http://pivotal.github.com/jasmine/). [Sprockets](https://github.com/sstephenson/sprockets) is used to describe dependencies between the files. To start jasmine run:
+All of the tests are written in [Jasmine](https://jasmine.github.io/). [Sprockets](https://github.com/sstephenson/sprockets) is used to describe dependencies between the files. To start jasmine run:
 
     $ rake jasmine
     
