@@ -1,6 +1,6 @@
 //= require underscore.js
 
-EquivalentXml = (function(){
+exports.EquivalentXml = (function(){
   var canonical_name = function(node){
     return node.namespaceURI + ':' + node.localName;
   };
